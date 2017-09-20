@@ -127,11 +127,11 @@ Die Statusvariablen sind mir Profilen für das WebFront vorbereitet. Tür, Rote 
 #### rfkey Gateway
 
 `void RFKEY_OpenRelay(integer $InstanceID, integer $RelayNumber, integer $Duration = 0);`   
-Öffnet über das Gateway mit der InstanzID `$InstanzID` das Relais `$RelayNumber` (3=E0, 4=E1, ...) für den Zeitraum `$Duration` (in 100ms. 0 = Standardzeit des Relais, Default-Wert falls nicht übergeben).
+Öffnet über das Gateway mit der InstanzID `$InstanzID` das Relais `$RelayNumber` (0=E0, 1=E1, ...) für den Zeitraum `$Duration` (in 100ms. 0 = Standardzeit des Relais, Default-Wert falls nicht übergeben).
 Die Funktion liefert keinerlei Rückgabewert.  
 
 `void RFKEY_CloseRelay(integer $InstanceID, integer $RelayNumber);`   
-Schließt über das Gateway mit der InstanzID `$InstanzID` das Relais `$RelayNumber` (3=E0, 4=E1, ...).
+Schließt über das Gateway mit der InstanzID `$InstanzID` das Relais `$RelayNumber` (0=E0, 1=E1, ...).
 Die Funktion liefert keinerlei Rückgabewert.  
 
 `json_string RFKEY_GetCardReaderStatus(integer $InstanceID);`   
