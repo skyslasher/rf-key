@@ -1,4 +1,4 @@
-rf:key Module(s) für IP-Symcon
+rf:key Module für IP-Symcon
 ===
 
 Mit dieser Bibliothek kann die [rf:key RFID Zutrittskontrolle](http://www.rf-key.de) in IP Symcon eingebunden werden.
