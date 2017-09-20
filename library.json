@@ -1,0 +1,12 @@
+{
+    "id": "{506F1228-B5EB-481B-94CE-3FF089D9D9F3}",
+    "author": "Andreas Hahn",
+    "name": "rfkey Interface for IP Symcon",
+    "url": "www.ergomation.de",
+    "compatibility": {
+        "version": "4.2"
+    },
+    "version": "1.0",
+    "build": 0,
+    "date": 0
+}

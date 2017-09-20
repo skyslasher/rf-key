@@ -1,0 +1,28 @@
+{
+    "elements":
+    [
+        { "type": "Label", "label": "rf:key System" },
+        { "type": "CheckBox", "name": "Status", "caption": "Aktiv" },
+        { "type": "ValidationTextBox", "name": "Hostname", "caption": "Host" },
+        { "type": "ValidationTextBox", "name": "Username", "caption": "Username" },
+        { "type": "PasswordTextBox", "name": "Password", "caption": "Password" },
+        { "type": "NumberSpinner", "name": "RelayExtensionCount", "caption": "Relaiserweiterungen" },
+        { "type": "Select", "name": "OperationsMode", "caption": "Betriebsart",
+            "options": [
+                { "label": "Normal/Offline", "value": 0 },
+                { "label": "Buskonverter", "value": 1 },
+                { "label": "Buskonverter mit Backup", "value": 2 }
+            ]
+        },
+        { "type": "Label", "label": "Default-Öffnungszeiten für Relais" },
+        { "type": "NumberSpinner", "name": "RelayDefault", "caption": "Standard (s)" },
+        { "type": "NumberSpinner", "name": "RelayMax", "caption": "Maximum (s)" }
+    ],
+    "actions": [],
+    "status":
+    [
+        { "code": 101, "icon": "active", "caption": "Instanz wird erstellt" },
+        { "code": 102, "icon": "active", "caption": "Instanz ist OK" },
+        { "code": 104, "icon": "inactive", "caption": "Inaktiv, bitte die übergeordnete Insanz prüfen" }
+    ]
+}

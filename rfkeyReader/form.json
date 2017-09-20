@@ -1,0 +1,24 @@
+{
+    "elements":
+    [
+        { "type": "NumberSpinner", "name": "ReaderAdress", "hex": true, "caption": "Leser-Adresse (HEX)" },
+        { "type": "Label", "label": "Name/Typ des Lesers werden nach einem erfolgreichen Zugang automatisch erkannt" },
+        { "type": "Label", "label": "%Reader_Name% (%Reader_Type%)" },
+        { "type": "Label", "label": "Öffnungszeiten für Relais" },
+        { "type": "NumberSpinner", "name": "LocalDoorDefault", "caption": "Standard (s)" },
+        { "type": "NumberSpinner", "name": "LocalDoorMax", "caption": "Maximum (s)" },
+        { "type": "Label", "label": "Standardzeit für Summer" },
+        { "type": "IntervalBox", "name": "BuzzerDefault", "caption": "Sekunden" },
+        { "type": "Label", "label": "Maximale Summer-Zeit ( 0 = keine Begrenzung )" },
+        { "type": "IntervalBox", "name": "BuzzerMax", "caption": "Sekunden" },
+        { "type": "Label", "label": "Aufzeichnung der (versuchten) Zugänge" },
+        { "type": "IntervalBox", "name": "LogSize", "caption": "Länge des Logs" }
+    ],
+    "actions": [],
+    "status":
+    [
+        { "code": 101, "icon": "active", "caption": "Instanz wird erstellt" },
+        { "code": 102, "icon": "active", "caption": "Instanz ist OK" },
+        { "code": 104, "icon": "inactive", "caption": "Inaktiv, bitte die übergeordnete Insanz prüfen" }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+	"id": "{6F90E302-DB2B-4CD1-9AB2-28AA739761D9}",
+	"name": "rfkey Konfigurator",
+	"type": 4,
+    "vendor": "",
+	"aliases": [],
+	"parentRequirements": [ "{A8746451-BE45-4F3E-BD5D-A03DD35684A3}" ],
+	"childRequirements": [],
+	"implemented": [ "{47261BDB-8F50-4C5E-ADC8-D0294C25149C}" ],
+	"prefix": "RFKEY"
+}

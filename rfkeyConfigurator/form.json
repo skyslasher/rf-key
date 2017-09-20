@@ -1,0 +1,14 @@
+{
+    "elements": [
+        {
+            "type": "Label",
+            "label": "Oops - irgendwas ist beim Erstellen des Konfigurators schief gegangen..."
+        },
+    ],
+    "actions": [],
+    "status": [
+        { "code": 101, "icon": "active", "caption": "Instanz wird erstellt" },
+        { "code": 102, "icon": "active", "caption": "Instanz ist OK" },
+        { "code": 104, "icon": "inactive", "caption": "Inaktiv, bitte die übergeordnete Insanz prüfen" }
+    ]
+}
