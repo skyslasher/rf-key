@@ -94,7 +94,7 @@ Aufzeichnung der (versuchten) Zugänge | Maximale Länge des Zugangslogs
 Die Statusvariablen werden automatisch angelegt. Das Löschen auch einzelner Variablen kann zu Fehlfunktionen führen.
 
 
-##### Statusvariablen
+#### Statusvariablen
 
 Die **rfkey Reader**-Instanzen haben folgende Statusvariablen:
 
@@ -112,7 +112,7 @@ Letzter Transponder                | String  | Transponder-Name aus rf:key (nur 
 Letzter PIN Code                   | String  | Falls ein Leser mit PIN_Code verwendet wird erscheint hier der zusätzlich zum gelesenen Transponder eingegebene Code
 
 
-##### Profile:
+#### Profile:
 
 Es werden keine Variablenprofile angelegt.
 
@@ -124,7 +124,7 @@ Die Statusvariablen sind mir Profilen für das WebFront vorbereitet. Tür, Rote 
 
 ### 7. PHP-Befehlsreferenz
 
-##### rfkey Gateway
+#### rfkey Gateway
 
 `void RFKEY_OpenRelay(integer $InstanceID, $RelayNumber, $Duration = 0);`
 Öffnet über das Gateway mit der InstanzID $InstanzID das Relais $RelayNumber (3=E0, 4=E1, ...) für den Zeitraum $Duration (in 100ms. 0 = Standardzeit des Relais, Default-Wert falls nicht übergeben).
@@ -138,7 +138,7 @@ Die Funktion liefert keinerlei Rückgabewert.
 Gibt den internen Status-Array der angeschlossenen Kartenleser als JSON-codierten String zurück. Der Status wird bei aktiver Verbindung alle 5 Sekunden aktualisiert.
 
 
-##### rfkey Reader
+#### rfkey Reader
 
 `void RFKEY_OpenDoorRelay(integer $InstanceID, $OpenTime = 0);`
 Öffnet das dem Kartenleser mit der InstanzID $InstanzID zugeordnete Relais mit der Standard-Öffnungszeit des Relais für den Zeitraum $OpenTime (in 100ms. 0 = Standardzeit des Relais, Default-Wert falls nicht übergeben).
@@ -157,7 +157,7 @@ Schalten den Summer des Kartenlesers mit der InstanzID $InstanzID auf den Wert $
 Die Funktion liefert keinerlei Rückgabewert.  
 
 `void RFKEY_SwitchLED(integer $InstanceID, boolean $State, integer $Duration = 0);`
-Setzt den Status der rote LED des Kartenlesers mit der InstanzID $InstanzID  auf den Wert $State (true = An; false = Aus) für den Zeitraum $Duration (in 100ms. 0 = unbegrenzt, Default-Wert falls nicht übergeben).
+Setzt den Status der roten LED des Kartenlesers mit der InstanzID $InstanzID  auf den Wert $State (true = An; false = Aus) für den Zeitraum $Duration (in 100ms. 0 = unbegrenzt, Default-Wert falls nicht übergeben).
 Die Funktion liefert keinerlei Rückgabewert.  
 
 `string RFKEY_GetTransponderLog(integer $InstanceID);`
