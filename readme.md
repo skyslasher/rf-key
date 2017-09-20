@@ -126,62 +126,44 @@ Die Statusvariablen sind mir Profilen für das WebFront vorbereitet. Tür, Rote 
 
 #### rfkey Gateway
 
-`void RFKEY_OpenRelay(integer $InstanceID, integer $RelayNumber, integer $Duration = 0);`
-
+`void RFKEY_OpenRelay(integer $InstanceID, integer $RelayNumber, integer $Duration = 0);`   
 Öffnet über das Gateway mit der InstanzID `$InstanzID` das Relais `$RelayNumber` (3=E0, 4=E1, ...) für den Zeitraum `$Duration` (in 100ms. 0 = Standardzeit des Relais, Default-Wert falls nicht übergeben).
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`void RFKEY_CloseRelay(integer $InstanceID, integer $RelayNumber);`
-
+`void RFKEY_CloseRelay(integer $InstanceID, integer $RelayNumber);`   
 Schließt über das Gateway mit der InstanzID `$InstanzID` das Relais `$RelayNumber` (3=E0, 4=E1, ...).
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`json_string RFKEY_GetCardReaderStatus(integer $InstanceID);`
-
+`json_string RFKEY_GetCardReaderStatus(integer $InstanceID);`   
 Gibt den internen Status-Array der an das Gateway mit der InstanzID `$InstanzID` angeschlossenen Kartenleser als JSON-codierten String zurück. Der Status wird bei aktiver Verbindung alle 5 Sekunden aktualisiert.
 
 
 #### rfkey Reader
 
-`void RFKEY_OpenDoorRelay(integer $InstanceID, integer $OpenTime = 0);`
-
+`void RFKEY_OpenDoorRelay(integer $InstanceID, integer $OpenTime = 0);`   
 Öffnet das dem Kartenleser mit der InstanzID `$InstanzID` zugeordnete Relais mit der Standard-Öffnungszeit des Relais für den Zeitraum `$OpenTime` (in 100ms. 0 = Standardzeit des Relais, Default-Wert falls nicht übergeben).
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`void RFKEY_OpenDoorRelayDefault(integer $InstanceID);`
-
+`void RFKEY_OpenDoorRelayDefault(integer $InstanceID);`   
 Öffnet das dem Kartenleser mit der InstanzID `$InstanzID` zugeordnete Relais mit der Standard-Öffnungszeit des Relais.
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`void RFKEY_CloseDoorRelay(integer $InstanceID);`
-
+`void RFKEY_CloseDoorRelay(integer $InstanceID);`   
 Schließt das dem Kartenleser mit der InstanzID `$InstanzID` zugeordnete Relais.
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`void RFKEY_SwitchBuzzer(integer $InstanceID, boolean $State, integer $BuzzTime = 0);`
-
+`void RFKEY_SwitchBuzzer(integer $InstanceID, boolean $State, integer $BuzzTime = 0);`   
 Schalten den Summer des Kartenlesers mit der InstanzID `$InstanzID` auf den Wert `$State` (true = An; false = Aus) für den Zeitraum `$BuzzTime` (in 100ms. 0 = Standardzeit für Summer, Default-Wert falls nicht übergeben).
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`void RFKEY_SwitchLED(integer $InstanceID, boolean $State, integer $Duration = 0);`
-
+`void RFKEY_SwitchLED(integer $InstanceID, boolean $State, integer $Duration = 0);`   
 Setzt den Status der roten LED des Kartenlesers mit der InstanzID `$InstanzID`  auf den Wert `$State` (true = An; false = Aus) für den Zeitraum `$Duration` (in 100ms. 0 = unbegrenzt, Default-Wert falls nicht übergeben).
 Die Funktion liefert keinerlei Rückgabewert.  
 
-
-`string RFKEY_GetTransponderLog(integer $InstanceID);`
-
+`string RFKEY_GetTransponderLog(integer $InstanceID);`   
 Gibt das Transponder-Log des Kartenlesers mit der InstanzID `$InstanzID` als String mit Zeilenumbrüchen zurück.
 
-
-`void RFKEY_ClearTransponderLog(integer $InstanceID);`
-
+`void RFKEY_ClearTransponderLog(integer $InstanceID);`   
 Löscht das Transponder-Log des Kartenlesers mit der InstanzID `$InstanzID`.
 Die Funktion liefert keinerlei Rückgabewert.  
 
