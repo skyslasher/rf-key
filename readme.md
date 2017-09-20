@@ -2,7 +2,7 @@ rf:key Module für IP-Symcon
 ===
 
 Mit dieser Bibliothek kann die [rf:key RFID Zutrittskontrolle](http://www.rf-key.de) in IP Symcon eingebunden werden.
-Warum augerechnet rf:key? Das System hat m.E. gegenüber anderen Systemen am Markt einen entscheidenden Vorteil: RFID-Zugangskarten können kopiert werden, die gängigen Kartenverschlüsselungen sind bereits gebrochen. Bei rf:key mit der HSEC-Erweiterung wird für jedes System ein eigener Schlüssel verwendet, welcher hardwareseitig in einem nicht auslesbaren Speicher abgelegt wurde. Die Authentifizierung erfolgt mit DESfire-Karten über ein Challenge-Response-Verfahren.
+Warum augerechnet rf:key? Das System hat m.E. gegenüber anderen Systemen am Markt einen entscheidenden Vorteil: RFID-Zugangskarten können kopiert werden, die gängigen Kartenverschlüsselungen sind bereits gebrochen. Bei rf:key mit der HSEC-Erweiterung wird für jedes System ein eigener Schlüssel verwendet, welcher hardwareseitig in einem nicht auslesbaren Speicher abgelegt wurde. Die Authentifizierung erfolgt mit DESfire-Karten über ein Challenge-Response-Verfahren. Diese Kombination macht das System so sicher.
 
 Der rf:key Controller stellt eine brauchbare Verwaltung über ein Web-Interface zur Verfügung. Für maximale Flexibilität lag es nahe, das System in IP Symcon einzubinden. Hier ist nun das Modul dazu ;-)
 
@@ -37,25 +37,25 @@ Das rf:key-System kann im Offline-Modus, als Buskonverter oder als Buskonverter 
 
 2. Offline-Modus
 * Kartenleser
-  * Anzeige der letzten erfolgreich authorisierten Transponder-ID und des rf:key-Transpondernamens
+  * Anzeige der letzten erfolgreich autorisierten Transponder-ID und des rf:key-Transpondernamens
 
 ### 2. Voraussetzungen
 
 - IP-Symcon ab Version 4.x
 - rf:key-System in beliebiger Ausbaustufe
-- Einen Benutzer im rf:key-System mit der Berechtigung "T"
+- Einen Benutzer im rf:key-System mit der Berechtigung **"T"**
 
 ### 3. Software-Installation
 
 Über das Modul-Control folgende URL hinzufügen.
-`git://github.com/paresy/skyslasher/rf-key.git`
+`git://github.com/skyslasher/rf-key.git`
 
 ### 4. Einrichten der Instanzen in IP-Symcon
 
-- Unter "Instanz hinzufügen" zuerst den 'rfkey Konfigurator' hinzufügen. Dieser ist unter dem Hersteller '(Sonstige)' aufgeführt. Hierbei wird zusätzlich eine 'Client Socket'-I/O-Instanz und eine 'rfkey Gateway'-Splitter-Instanz angelegt.
+Unter "Instanz hinzufügen" zuerst den **rfkey Konfigurator** hinzufügen. Dieser ist unter dem Hersteller **(Sonstige)** aufgeführt. Hierbei wird zusätzlich eine **Client Socket**-I/O-Instanz und eine **rfkey Gateway**-Splitter-Instanz angelegt.
 Die 'Client-Socket'-Instanz ist nicht direkt konfigurierbar, sie wird über die Konfigurationsseite des rf-key Gateways konfiguriert.
 
-Zuerst wird das rfkey Gateway eingerichtet:
+Zuerst wird das **rfkey Gateway** eingerichtet:
 
 __Konfigurationsseite__:
 
@@ -72,9 +72,10 @@ Maximum (s)                       | Maximale Öffnungszeit
 
 Sobald die Verbindung zum rf:key-System hergestellt wurde, können die Kartenleser eingerichtet werden. Diese werden automatisch erkannt. Damit die in der rf:key-Verwaltungsoberfläche eingetragenen Namen der Kartenleser übernommen werden können, bitte nun an jedem Kartenleser einen Lesevorgang durchführen.
 
-Über das Konfigurator-Modul können die Kartenleser-Instanzen 'rfkey Reader' nun komfortabel angelegt werden. Hierfür den gewünschten Leser in der Tabelle auswählen und auf den Button "Instanz erstellen" klicken. Die Instanz wird nun erzeugt, mit Standardwerten konfiguriert und mit dem rfkey Gateway verbunden.
+Über das Konfigurator-Modul können die Kartenleser-Instanzen **rfkey Reader** nun komfortabel angelegt werden. Hierfür den gewünschten Leser in der Tabelle auswählen und auf den Button "Instanz erstellen" klicken. Die Instanz wird nun erzeugt, mit Standardwerten konfiguriert und mit dem rfkey Gateway verbunden.
 
-Die Leser
+Die **rfkey Reader** haben folgende Konfigurationsoptionen:
+
 __Konfigurationsseite__:
 
 Name                                  | Beschreibung
@@ -95,19 +96,20 @@ Die Statusvariablen werden automatisch angelegt. Das Löschen auch einzelner Var
 
 ##### Statusvariablen
 
-Die Kartenleser-Instanzen
-Name                               | Typ       | Beschreibung
----------------------------------- | --------- | ----------------
-Tür                                | Boolean   | Status des zugeordneten Türrelais, über WebFront schaltbar
-Rote LED                           | Boolean   | Status der roten LED, über WebFront schaltbar
-Summer                             | Boolean   | Status des Summers, über WebFront schaltbar
-Aktiv                              | Boolean   | Status Betriebsbereit/Ausgefallen
-Sabotagekontakt                    | Boolean   | Status Sabotage
-Letzte autorisierte Transponder-ID | String    | Transponder-ID (nur bei Betriebsmodus 1)
-Letzter autorisierter Transponder  | String    | Transponder-Name aus rf:key (nur bei Betriebsmodus 1)
-Letzte Transponder-ID              | String    | Transponder-ID
-Letzter Transponder                | String    | Transponder-Name aus rf:key (nur bei Betriebsmodus 1)
-Letzter PIN Code                   | String    | Falls ein Leser mit PIN_Code verwendet wird erscheint hier der zusätzlich zum gelesenen Transponder eingegebene Code
+Die **rfkey Reader**-Instanzen haben folgende Statusvariablen:
+
+Name                               | Typ     | Beschreibung
+---------------------------------- | ------- | ----------------
+Tür                                | Boolean | Status des zugeordneten Türrelais, über WebFront schaltbar
+Rote LED                           | Boolean | Status der roten LED, über WebFront schaltbar
+Summer                             | Boolean | Status des Summers, über WebFront schaltbar
+Aktiv                              | Boolean | Status Betriebsbereit/Ausgefallen
+Sabotagekontakt                    | Boolean | Status Sabotage
+Letzte autorisierte Transponder-ID | String  | Transponder-ID (nur bei Betriebsmodus 1)
+Letzter autorisierter Transponder  | String  | Transponder-Name aus rf:key (nur bei Betriebsmodus 1)
+Letzte Transponder-ID              | String  | Transponder-ID
+Letzter Transponder                | String  | Transponder-Name aus rf:key (nur bei Betriebsmodus 1)
+Letzter PIN Code                   | String  | Falls ein Leser mit PIN_Code verwendet wird erscheint hier der zusätzlich zum gelesenen Transponder eingegebene Code
 
 
 ##### Profile:
