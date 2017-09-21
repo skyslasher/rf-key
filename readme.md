@@ -18,7 +18,7 @@ Der rf:key Controller stellt eine brauchbare Verwaltung über ein Web-Interface 
 
 ### 1. Funktionsumfang
 
-Das rf:key-System kann im Offline-Modus, als Buskonverter oder als Buskonverter mit Fallback zum Oflline-Modus (bei Ausfall von IP Symcon) betrieben werden. Die Betriebsart ist im Gateway-Modul auswählbar.
+Das rf:key-System kann im Offline-Modus, als Buskonverter oder als Buskonverter mit Fallback zum Offline-Modus (bei Ausfall von IP Symcon) betrieben werden. Die Betriebsart ist im Gateway-Modul auswählbar.
 
 1. Alle Betriebsmodi
 * Kartenleser
@@ -35,7 +35,7 @@ Das rf:key-System kann im Offline-Modus, als Buskonverter oder als Buskonverter 
 * Relais-Erweiterung
   * Steuerung der Relais
 
-2. Offline-Modus
+2. zusätzlich im Offline-Modus
 * Kartenleser
   * Anzeige der letzten erfolgreich autorisierten Transponder-ID und des rf:key-Transpondernamens
 

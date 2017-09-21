@@ -91,8 +91,8 @@ class rfkeyGateway extends ErgoIPSModule {
         // subscribe to IPS messages
         $this->RegisterMessage( 0, 10001 ); // IPS_KERNELSTARTED
 
-        // connect to existing client socket, or create new instance
-        $this->ConnectParent( CSCK_ClientSocket_GUID );    
+        // create new client socket instance and connect
+        $this->RequireParent( CSCK_ClientSocket_GUID );
     }
 
     /*
@@ -129,13 +129,8 @@ class rfkeyGateway extends ErgoIPSModule {
             $Hostname = $this->GetHostname();
 
             // opening the client socket without hostname is senseless
-            // this also protects existing client socket instances to get their configuration
-            // overwritten when the module is created and connected to an existing instance
             if ( ( '' == $Hostname ) && ( $Status ) )
-            {
                 $Status = false;
-                return;
-            }
 
             if ( ( $ClientSocketConfig[ "Host" ] == $Hostname ) && ( $ClientSocketConfig[ "Open" ] == $Status ) )
             {
