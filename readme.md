@@ -52,7 +52,7 @@ Das rf:key-System kann im Offline-Modus, als Buskonverter oder als Buskonverter 
 
 ### 4. Einrichten der Instanzen in IP-Symcon
 
-Unter "Instanz hinzufügen" zuerst den **rfkey Konfigurator** hinzufügen. Dieser ist unter dem Hersteller **(Sonstige)** aufgeführt. Hierbei wird zusätzlich eine **Client Socket**-I/O-Instanz und eine **rfkey Gateway**-Splitter-Instanz angelegt.
+Unter "Instanz hinzufügen" zuerst den **rfkey Konfigurator** hinzufügen. Dieser ist unter dem Hersteller **(Konfigurator)** aufgeführt. Hierbei wird zusätzlich eine **Client Socket**-I/O-Instanz und eine **rfkey Gateway**-Splitter-Instanz angelegt.
 Die 'Client-Socket'-Instanz ist nicht direkt konfigurierbar, sie wird über die Konfigurationsseite des rf-key Gateways konfiguriert.
 
 Zuerst wird das **rfkey Gateway** eingerichtet:
