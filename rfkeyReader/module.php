@@ -115,7 +115,7 @@ class rfkeyReader extends ErgoIPSModule {
         $InstanceID = $this->RegisterVariableString(
             RFKEY_RegVar_LastSuccesfulTransponderID,
             'Letzte autorisierte Transponder-ID',
-            '~String',
+            '',
             $this->InstanceID
         );
         IPS_SetPosition( $InstanceID, 7 );
@@ -123,7 +123,7 @@ class rfkeyReader extends ErgoIPSModule {
         $InstanceID = $this->RegisterVariableString(
             RFKEY_RegVar_LastSuccesfulTransponderName,
             'Letzter autorisierter Transponder',
-            '~String',
+            '',
             $this->InstanceID
         );
         IPS_SetPosition( $InstanceID, 8 );
@@ -131,7 +131,7 @@ class rfkeyReader extends ErgoIPSModule {
         $InstanceID = $this->RegisterVariableString(
             RFKEY_RegVar_LastTransponderID,
             'Letzte Transponder-ID',
-            '~String',
+            '',
             $this->InstanceID
         );
         IPS_SetPosition( $InstanceID, 9 );
@@ -139,7 +139,7 @@ class rfkeyReader extends ErgoIPSModule {
         $InstanceID = $this->RegisterVariableString(
             RFKEY_RegVar_LastTransponderName,
             'Letzter Transponder',
-            '~String',
+            '',
             $this->InstanceID
         );
         IPS_SetPosition( $InstanceID, 10 );
@@ -147,7 +147,7 @@ class rfkeyReader extends ErgoIPSModule {
         $InstanceID = $this->RegisterVariableString(
             RFKEY_RegVar_LastPINCode,
             'Letzter PIN Code',
-            '~String',
+            '',
             $this->InstanceID
         );
         IPS_SetPosition( $InstanceID, 11 );

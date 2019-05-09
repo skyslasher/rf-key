@@ -190,7 +190,7 @@ class rfkeyKonfigurator extends ErgoIPSModule {
                         "name" => "Devices",
                         "caption" => "Kartenleser",
                         "rowCount" => 5,
-                        "sort" => array( "column" => "name", "direction" => "ascending" ),
+                        "sort" => array( "column" => "Name", "direction" => "ascending" ),
                         "columns" => array(
                             array( "label" => "Instanz-ID",
                                 "name" => "InstanceID", 
