@@ -74,7 +74,7 @@ class rfkeyKonfigurator extends ErgoIPSModule {
     /*
         create instance from selection
     */
-    public function TableClick( $Device )
+    public function TableClick( int $Device )
     {
         // instance exists?
         if ( '-' != $Device[ "InstanceID" ] )

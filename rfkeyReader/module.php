@@ -537,7 +537,7 @@ class rfkeyReader extends ErgoIPSModule {
     /*
         entry point for the status timer
     */
-    public function StatusUpdate( $StatusElement )
+    public function StatusUpdate( string $StatusElement )
     {
         // set back status and clear status reset timer
         $this->LogDebug( "Entering StatusUpdate" );
@@ -572,7 +572,7 @@ class rfkeyReader extends ErgoIPSModule {
     /*
         open door relay with variable opening time
     */
-    public function OpenDoorRelay( $OpenTime = RFKEY_Default_Relais_Time_hms )
+    public function OpenDoorRelay( int $OpenTime = RFKEY_Default_Relais_Time_hms )
     {
         $MaxOpenTime = $this->GetDoorRelayMax() * 10;
         $DefaultOpenTime = $this->GetDoorRelayDefault() * 10;
@@ -607,7 +607,7 @@ class rfkeyReader extends ErgoIPSModule {
     /*
         turn LED on or off, default duration is infinite ( 0 )
     */
-    public function SwitchLED( $State, $Duration = 0 )
+    public function SwitchLED( bool $State, int $Duration = 0 )
     {
         if ( RFKEY_Max_Duration_hms < $Duration )
             $Duration = RFKEY_Max_Duration_hms;
@@ -634,7 +634,7 @@ class rfkeyReader extends ErgoIPSModule {
     /*
         turn buzzer on or off
     */
-    public function SwitchBuzzer( $State, $BuzzTime = RFKEY_Default_Buzz_Time_hms )
+    public function SwitchBuzzer( bool $State, int $BuzzTime = RFKEY_Default_Buzz_Time_hms )
     {
         $MaxBuzzTime = $this->GetBuzzerMax() * 10;
         $DefaultBuzzTime = $this->GetBuzzerDefault() * 10;

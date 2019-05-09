@@ -1131,7 +1131,7 @@ class rfkeyGateway extends ErgoIPSModule {
     /*
         open external relay - proxy function for OpenCloseRelay
     */
-    public function OpenRelay( $RelayNumber, $Duration = RFKEY_Default_Relais_Time_hms )
+    public function OpenRelay( int $RelayNumber, int $Duration = RFKEY_Default_Relais_Time_hms )
     {
         return $this->OpenCloseRelay( $RelayNumber, true, $Duration );
     }
@@ -1139,7 +1139,7 @@ class rfkeyGateway extends ErgoIPSModule {
     /*
         close external relay - proxy function for OpenCloseRelay
     */
-    public function CloseRelay( $RelayNumber )
+    public function CloseRelay( int $RelayNumber )
     {
         return $this->OpenCloseRelay( $RelayNumber, false );
     }
