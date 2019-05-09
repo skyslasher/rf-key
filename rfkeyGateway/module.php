@@ -103,7 +103,7 @@ class rfkeyGateway extends ErgoIPSModule {
         $ConfigArray = array(
             "Host" => $this->GetHostname(),
             "Port" => 1010,
-            "Open" => $this->GetStatus()
+            "Open" => $this->GetMyStatus()
         );
         $Config = json_encode( $ConfigArray );        
         return $Config;
@@ -125,7 +125,7 @@ class rfkeyGateway extends ErgoIPSModule {
         if ( 10103 == IPS_GetKernelRunlevel() ) // KR_READY
         {
             $ClientSocketConfig = json_decode( IPS_GetConfiguration( $ParentInstID ), true );
-            $Status = $this->GetStatus();
+            $Status = $this->GetMyStatus();
             $Hostname = $this->GetHostname();
 
             // opening the client socket without hostname is senseless
@@ -169,7 +169,7 @@ class rfkeyGateway extends ErgoIPSModule {
     ************************************************************************/
 
     // property persistence (lasts across restarts)
-    private function GetStatus()
+    private function GetMyStatus()
     {
         return $this->ReadPropertyBoolean( RFKEY_Property_Status );
     }
